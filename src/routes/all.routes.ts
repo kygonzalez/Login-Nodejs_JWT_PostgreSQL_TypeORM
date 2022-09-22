@@ -1,12 +1,17 @@
 import {Router} from 'express'
-import {login} from '../controllers/test.controllers'
-import {register} from '../controllers/test.controllers'
-import {index} from '../controllers/test.controllers'
+import {login,index,register} from '../controllers/views.controller'
+import {isAuthenticated, registerUser, loginProcess, logout} from '../controllers/auth.controller'
 
 const router = Router()
 
-router.get('/', index)
+//Routes for views
+router.get('/',isAuthenticated, index)
 router.get('/login', login)
 router.get('/register', register)
+
+//Routes for auth methods
+router.post('/register',registerUser)
+router.post('/login',loginProcess)
+router.get('/logout',logout)
 
 export default router

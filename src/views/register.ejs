@@ -23,7 +23,7 @@
                 <div class="card border-primary">
                     <div class="card-header bg-primary text-white">Registration</div>
                     <div class="card-body text-primary">
-                        <form action="/register" method="POST">
+                        <form action="/register" method="post">
     
                             <div class="mb-3">
                                 <label for="name" class="form-laber">Full Name</label>
@@ -37,17 +37,18 @@
     
                             <div class="mb-3">
                                 <label for="pass" class="form-laber">Password</label>
-                                <input type="text" name="pass" id="passwrd" class="form-control">
+                                <input type="password" name="pass" id="pass" class="form-control">
                             </div>
 
                             <div class="card-footer bg-transparent border-primary">
                                 <a href="/" type="button" class="btn btn-secondary">Cancel</a>
-                                <button type="button" class="btn btn-primary">Register</button>
+                                <button type="submit" class="btn btn-primary">Register</button>
                             </div>
 
                         </form>
                     </div>
                 </div> 
+                
             </div>
         </div>
     </div>

@@ -1,5 +1,5 @@
 //import all modules
-import express from 'express'
+import express, { NextFunction } from 'express'
 import morgan from 'morgan'
 import cors from 'cors'
 
@@ -32,10 +32,12 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json());
 
 //set environment variables
-dotenv.config({path:'./env/.env'})
+dotenv.config()
+//console.log(process.env)
+
 
 //to work wiyh cookies
-//app.use(cookieParser())
+app.use(cookieParser())
 
 
 //Route
